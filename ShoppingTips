@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Shopping Tips</title>
+
+        <!--CSS code goes here-->
+        <style>
+            h1{
+                font-size: 50px;
+                color: #00000;
+                font-family: "calibri", 'Comic Sans';
+                text-align: center;
+            }
+            
+            body{
+                background-color: #33CCFF;
+            }
+            
+            #home {
+                position: absolute;
+                left: 10%;
+                top: 200px;
+                /*bottom: 10%;*/
+                width: 100px; /*10%*/
+                /*padding-bottom: 10%;*/
+                border-radius: 50%;
+                border: 2px solid #f5f5f5;
+                overflow: hidden;
+                background: #464646;
+                box-shadow: 0 0 3px gray;
+                height: 100px;
+            }
+            
+            #home:hover {
+                background: #262626;
+            }
+            
+            #home img {
+                display: block;
+                width: 76%;
+                padding: 12%;
+                height: auto;
+            }
+            
+            #tiptext{
+                font-size: 30px;
+                color: #FFFFFF; 
+                position: absolute;
+                left: 30%;
+                /*top: 35%;*/
+                margin-top: 20px;
+                right: 30%;
+                height: auto;
+                width: auto;
+            }
+            
+           
+            a.refresh{
+                text-decoration: none;
+                font-size: 100px;
+                vertical-align: middle;
+                position: absolute;
+                /*bottom: 10%;*/
+                top: 200px;
+                right: 10%;
+            }
+            
+            a.refresh:hover{
+                color: red;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div><h1><b>Shopping Tips</b></h1></div>
+        <div>
+           
+             <div id = "home">
+                 <a href="http://fridgewiz.tumblr.com"><img src="http://codeitdown.com/media/Home_Icon.svg" alt="Home" /></a>
+        
+            </div>
+        <div id="tiptext">
+        <script language="JavaScript">
+        
+        var r_text = new Array ();
+        r_text[0] = " Shop smart. Plan meals, use grocery lists, and avoid impulse buys. This way, you’re less likely to buy things you don’t need and that you’re unlikely to actually consume. Buy items only when you have a plan for using them, and wait until perishables are all used up before buying more. Check out these apps for extra-easy meal planning.";
+        
+        r_text[1] = "Buy exactly what you need. For example, if a recipe calls for two carrots, don’t buy a whole bag. Instead, buy loose produce so you can purchase the exact number you’ll use. Likewise, try buying grains, nuts, and spices from bulk bins so you can measure out exactly what you need and don’t over-buy (Just note that there's a difference between buying in bulk and buying from bulk bins; the first one can actually create more waste if we buy more than we can realistically use). Bonus: This tip will save some cash, to boot.";
+        
+        r_text[2] = " Be realistic. If you live alone, you won’t need the same number of apples as a family of four (unless you really like apples). If you rarely cook, don’t stock up on goods that have to be cooked in order to be consumed (such as baking supplies or dried grains and beans).";
+        
+        r_text[3] = " Buy funny-looking produce. Many fruits and vegetables are thrown away because their size, shape, or colors don’t quite match what we think these items “should” look like. But for the most part these items are perfectly good to eat, and buying them at a farmer’s market or the grocery store helps use up food that might otherwise be tossed.";
+        
+        r_text[4] = " Don’t shop hungry. It makes you buy more.";
+        
+        var i = Math.floor(4*Math.random())
+        
+        document.write(r_text[i]);
+        </script>
+        </div>
+        
+ <a href="http://growyourownfridgewiz.tumblr.com" class= "refresh">&rarr;</a>
+         
+       
+        </div>
+    </body>
+</html>
