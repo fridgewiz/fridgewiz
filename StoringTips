@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Storing Tips</title>
+
+        <!--CSS code goes here-->
+        <style>
+            h1{
+                font-size: 50px;
+                color: #00000;
+                font-family: "calibri", 'Comic Sans';
+                text-align: center;
+            }
+            
+            /*body{
+                background-color: #33CCFF;
+            }*/
+             body {
+                background: url("https://c2.staticflickr.com/8/7736/18062560590_57d5d8beaa_h.jpg");
+                background-size:100% 100%;
+                background-repeat:no-repeat;
+                background-attachment:fixed;
+            }
+            
+            #home {
+                position: absolute;
+                left: 10%;
+                top: 200px;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                border: 2px solid #f5f5f5;
+                overflow: hidden;
+                background: #464646;
+                box-shadow: 0 0 3px gray;
+            }
+            
+            #home:hover {
+                background: #262626;
+            }
+            
+            #home img {
+                display: block;
+                width: 76%;
+                padding: 12%;
+                height: auto;
+            }
+            
+            #tiptext{
+                font-size: 22px;
+                color: #2E47A0; /*#FFFFFF*/
+                position: absolute;
+                left: 30%;
+                margin-top: 20px;
+                right: 30%;
+                height: auto;
+                width: auto;
+            }
+            
+            
+            a.refresh{
+                text-decoration: none;
+                font-size: 100px;
+                vertical-align: middle;
+                position: absolute;
+                top: 200px;
+                right: 10%;
+            }
+            
+            a.refresh:hover{
+                color: red;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1><b>Storing Tips</b></h1> 
+        <div>
+            <div id = "home">
+            <a href="http://fridgewiz.tumblr.com"><img src="http://codeitdown.com/media/Home_Icon.svg" alt="Home" /></a>
+            </div>
+            
+        <div id = "tiptext">
+        <script language="JavaScript">
+        
+        var r_text = new Array ();
+        r_text[0] = "Practice FIFO. It stands for First In, First Out. When unpacking groceries, move older products to the front of the fridge/freezer/pantry and put new products in the back. This way, you’re more likely to use up the older stuff before it expires.";
+
+        r_text[1] = "Monitor what you throw away. Designate a week in which you write down everything you throw out on a regular basis. Tossing half a loaf of bread each week? Maybe it’s time to start freezing half that loaf the moment you buy it so it doesn’t go stale before you’re able to eat it.";
+
+         r_text[2] = "Take stock. Note upcoming expiration dates on foods you already have at home, and plan meals around the products that are closest to their expiration. On a similar note, keep a list of what’s in the freezer and when each item was frozen. Place this on the freezer door for easy reference and use items before they pass their prime.";
+
+        r_text[3] = "Eat leftovers! Brown-bag them for work or school for a free packed lunch. If you don’t want to eat leftovers the day after they’re cooked, freeze and save them for later (just remember to note when you froze them so you can use them up in a timely fashion).";
+
+"Check the fridge and the freezer. Make sure it’s functioning at maximum efficiency. Look for tight seals, proper temperature, etc. — this will ensure that the fridge keeps food fresh as long as possible. How? http://www.foodrepublic.com/2012/07/26/where-food-goes-fridge"
+
+        r_text[4] = "Donate what you won’t use. Never going to eat that can of beans? Donate it to a food kitchen before it expires so it can be consumed by someone who needs it.";
+        r_text[5] = "Can it. Got more fruit than you know what to do with? Try canning it so it’ll last for months to come. (Plus, who doesn’t love eating “fresh” peaches in winter?)";
+
+        r_text[6] = "Pickle it. Both fruits and vegetables can be preserved through an easy pickling process.";
+
+        r_text[7] ="Understand expiration dates. Turns out those expiration dates don’t always have to do with food safety; rather, they’re usually manufacturers’ suggestions for peak quality. If stored properly, most foods (even meat) stay fresh several days past the “use-by” date. If a food looks, smells, and tastes okay, it should be fine. If any of these elements are off, then it’s time to toss it.";
+        
+        r_text[8] = "Compost! Hate potato skins? Don’t feel like turning wilted vegetables into soup stock? No worries; food scraps still don’t need to be tossed. Just start a compost pile in the backyard or even under the sink, and convert food waste into a useful resource.";
+
+        r_text[9] = "Repackage. Put small quantities of leftover sour cream or other perishables in smaller containers; they’ll last longer. Cookies, crackers, and the like will also last longer if stored in glass jars.";
+
+        r_text[10] = "Milk your budget. Milk about to expire? Freeze it. You can thaw it out and use it later. Same with things that might be rotting in your vegetable drawer: onions, parsley, tomatoes, garlic. Not only will freezing keep it from rotting, it will keep it from stinking.";
+
+        r_text[11] = "Use the freezer. When you cook a meal that’s big enough to have leftovers, go ahead and freeze them right away. The food will taste better, and you won’t have to eat the same thing three nights in a row.";
+
+        r_text[12] = "Use the freezer. When you freeze sauces or soups in plastic freezer bags, squeeze out as much air as possible before sealing the bag. Stack them flat so they won’t take up much space in your freezer.";
+
+        r_text[13] = "Use the freezer. Fruits like grapes, bananas, and strawberries can be frozen. Spread out berries on a cookie sheet to freeze so they won’t be stuck together, before you wrap them up.";
+
+        r_text[14] = "Use the freezer. Leftover wine can be frozen in ice cube trays, and then later added to simmering meat dishes or spaghetti sauce.";
+
+        r_text[15] = "Have wooden clothes pins accessible in the kitchen to seal bags closed in the pantry and freezer.";
+
+        r_text[16] = "Mason jars are an easy and inexpensive way to store bulk pantry foods. While you don’t want to reuse a lid for canning, it’s fine to wash and reuse them for storing dry goods.";
+
+        r_text[17] = "One bad apple… Check your large bags of potatoes, onions, apples, and cartons of berries before you store them away. You wouldn’t want to let one funky potato cause the rest of them to go bad before you eat them.";
+
+        r_text[18] = "Drying. This is one of the oldest methods of food preservation. This process acts by reducing the moisture content in the food which in turn arrests bacterial growth. Drying is largely used for preserving meat. However, fruits and vegetables can also be preserved by this method. The additional advantage of drying is that it reduces the size and weight of the food product, therefore making it more portable. Sun drying, oven drying, and drying with the help of a dehydrator are the various ways used to reduce the water content of food.";
+
+        r_text[19] = "Vacuum Treatment: In this method food is stored in airtight containers that strips bacteria of the oxygen that helps it carry on with its metabolism. Hence, the growth of these micro-organisms is arrested and food is preserved. Nuts are usually preserved by this method.";
+
+        r_text[19] = "Sugaring: Sugaring is used to preserve fruits like apples, apricots and plums in sugary syrup that dehydrates the foods. The skin of certain fruits are cooked in sugar till they crystallize and then they are stored in a dry environment.";
+
+        r_text[20] = "Salting: Salt is a natural food preservative that draws out moisture from the food as well as from the cells of the micro-organisms that may be present in it. Lack of moisture kills these organisms and hence prevents food spoilage. Salt is commonly used as a preservative in meat products.";
+
+   var i = Math.floor(20*Math.random())
+        
+        document.write(r_text[i]);
+        </script>
+        </div>
+        <a href="http://storefridgewiz.tumblr.com" class= "refresh">&rarr;</a>
+
+    </div>       
+    </body>
+</html>
