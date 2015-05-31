@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Cooking Tips</title>
+
+        <!--CSS code goes here-->
+        <style>
+            h1{
+                font-size: 50px;
+                color: #00000;
+                font-family: "calibri", 'Comic Sans';
+                text-align: center;
+            }
+            
+            body{
+                background-color: #33CCFF;
+            }
+            
+              #home {
+                position: absolute;
+                left: 10%;
+                top: 200px;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                border: 2px solid #f5f5f5;
+                overflow: hidden;
+                background: #464646;
+                box-shadow: 0 0 3px gray;
+            }
+            
+            #home:hover {
+                background: #262626;
+            }
+            
+            #home img {
+                display: block;
+                width: 76%;
+                padding: 12%;
+                height: auto;
+            }
+            
+            
+            #tiptext{
+                font-size: 30px;
+                color: #FFFFFF; 
+                position: absolute;
+                left: 30%;
+                margin-top: 20px;
+                right: 30%;
+                height: auto;
+                width: auto;
+            }
+            
+            
+            a.refresh{
+                text-decoration: none;
+                font-size: 100px;
+                vertical-align: middle;
+                position: absolute;
+                top: 200px;
+                right: 10%;
+            }
+            
+            a.refresh:hover{
+                color: red;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1><b>Cooking Tips</b></h1>
+        <div>
+             <div id = "home">
+                <a href="http://fridgewiz.tumblr.com" class="home"><img src="http://codeitdown.com/media/Home_Icon.svg" alt="Home" /></a>
+             </div>
+          <div id="tiptext">
+        <script language="JavaScript">
+        
+      
+        var r_text = new Array ();
+        r_text[0] = " Use it all. When cooking, use every piece of whatever food you’re cooking with, whenever possible. For example, leave the skin on cucumbers and potatoes, sauté broccoli stems along with the florets (they taste good too; we promise!), and so on. Bonus: Skins and stems often have provide additional nutrients for our bodies.";
+        
+        r_text[1] = " Repurpose leftovers scraps. Use vegetable and meat scraps in homemade stocks, and use citrus fruit rinds and zest to add flavor to other meals. Want more ideas? Check out these resources for using up food scraps.";
+        
+        r_text[2] = " What do you do with old bread? Cut the bread into squares and toast on low heat to make croutons. Toast and then crumble bread in a food processor to make bread crumbs. Make french toast or stuffing.";
+        
+        r_text[3] = " Buy funny-looking produce. Many fruits and vegetables are thrown away because their size, shape, or colors don’t quite match what we think these items “should” look like. But for the most part these items are perfectly good to eat, and buying them at a farmer’s market or the grocery store helps use up food that might otherwise be tossed.";
+        
+        r_text[4] = " Fried rice is better when made with day old rice instead of fresh-cooked rice.";
+        
+         r_text[5] = " Brown bananas taste sweet in smoothies and banana bread.";
+        
+        r_text[6] = " Old vegetables can be added into stews or stocks.";
+        
+        r_text[7] = " Tomatoes can be pureed into tomato sauce or salsa";
+        
+        r_text[8] = " The smaller the item, the higher the baking temperature. For example, I bake mini chocolate chip-toffee cookies at 500 degrees F for only 4 minutes. Perfect end result. Jim Lahey Co. and Sullivan Street Bakery, New York City";
+        
+        r_text[9] = " After making eggs sunny-side up, deglaze the pan with sherry vinegar, then drizzle the sauce on the eggs to add another dimension to the dish. Didier Elena, New York City";
+        
+        r_text[10] = " After working with garlic, rub your hands vigorously on your stainless steel sink for 30 seconds before washing them. It will remove the odor. Gerard Craft, Niche and Taste, St. Louis";
+        
+        r_text[11] = " Always season meat and fish evenly; sprinkle salt and pepper as though it's \"snowing.\" This will avoid clumping or ending up with too much seasoning in some areas and none in others. Mary Dumont, Harvest, Cambridge, MA";
+        
+        r_text[12] = " When chopping herbs, toss a little salt onto the cutting board; it will keep the herbs from flying around. Joanne Chang, Flour Bakery & Cafe, Boston";
+        
+        r_text[13] = " Anytime you are using raw onions in a salsa and you are not going to eat that salsa in the next 20 minutes or so, be sure to rinse the diced onions under cold running water first, then blot dry. This will rid them of sulfurous gas that can ruin fresh salsa. It's really important in guacamole, too. Mark Miller, Coyote Cafe, Santa Fe, NM";
+        
+        var i = Math.floor(13*Math.random())
+        
+        document.write(r_text[i]);
+        </script>
+        </div>
+        
+        <a href="http://growyourownfridgewiz.tumblr.com" class= "refresh">&rarr;</a>
+         
+        
+       </div>
+        
+    </body>
+</html>
