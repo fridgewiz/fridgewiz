@@ -135,11 +135,10 @@
                          <ul class="hidden">
                              <li><a href="http://shopfridgewiz.tumblr.com/"><b>Shopping Tips</b></a></li>
                              <li><a href="http://cookfridgewiz.tumblr.com/"><b>Cooking Tips</b></a></li>
-                             <li><a href="http://storefridgewiz.tumblr.com/"    ><b>Storing Tips</b></a></li>
+                             <li><a href="http://storefridgewiz.tumblr.com/"><b>Storing Tips</b></a></li>
                              <li><a href="http://growyourownfridgewiz.tumblr.com/"><b>Grow Your Own</b></a></li>
                          </ul>
                     </li>
-                    <li><a href="http://recipesfridgewiz.tumblr.com/"><b>Share Recipes</b></a></li>
                     <br><br><br><br><br><br><br><br><br><br><br><br><br>
                 </ul>
             </nav>
@@ -166,7 +165,7 @@
             <input value="FORID:11" name="cof" type="hidden"/>
             <input id="q" style="" name="q" size="75" type="text"/>
             <button class="btn">Search</button>
-            <div class = "help"><p2>Welcome to FridgeWiz, the site that teaches you about cooking by providing you with recipes and tips that will be useful in the kitchen. Above, you can find out about who we are, find random tips about cooking and grocceries, or share your own recipes. On the left of this question mark is a search bar that can you be use to find recipes. In order to use the search bar properly, type in the name of the recipe. If you do not have a specific recipe, you can search by ingredient by putting the quantity of the ingredient and the ingredient name in quotation marks. Ex. "2 Eggs"
+            <div class = "help"><p2>Welcome to FridgeWiz, the site that teaches you about cooking by providing you with recipes and tips that will be useful in the kitchen. Above, you can find out about who we are, find random tips about cooking and grocceries. On the left of this question mark is a search bar that can you be use to find recipes. In order to use the search bar properly, type in the name of the recipe. If you do not have a specific recipe, you can search by ingredient by putting the quantity of the ingredient and the ingredient name in quotation marks. Ex. "2 Eggs"
 Thank you for visiting our website and we hope you enjoy it!</p2></div>
         </form>
     </div>    
