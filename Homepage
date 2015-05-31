@@ -154,8 +154,12 @@
             <input value="FORID:11" name="cof" type="hidden"/>
             <input id="q" style="" name="q" size="75" type="text"/>
             <button class="btn">Search</button>
-            <div class = "help"><p2>Welcome to FridgeWiz, the site that teaches you about cooking by providing you with recipes and tips that will be useful in the kitchen. Above, you can find out about who we are, find random tips about cooking and grocceries. On the left of this question mark is a search bar that can you be use to find recipes. In order to use the search bar properly, type in the name of the recipe. If you do not have a specific recipe, you can search by ingredient by putting the ingredient name (i.e, eggs)
-Thank you for visiting our website and we hope you will enjoy it!</p2></div>
+            <div class = "help"><p2>Welcome to FridgeWiz, the site that teaches you about cooking by providing you with recipes 
+            and tips that will be useful in the kitchen. Above, you can find out about who we are, find random tips about 
+            cooking and grocceries. On the left of this question mark is a search bar that can you be use to find recipes. 
+            In order to use the search bar properly, type in the name of the recipe. If you do not have a specific recipe, you
+            can search by ingredient by putting the ingredient name (i.e, eggs)
+            Thank you for visiting our website and we hope you will enjoy it!</p2></div>
         </form>
     </div>    
     
