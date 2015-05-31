@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+            <title>Reference</title>
+        
+            <!--CSS code goes here-->
+            <style>
+                h{
+                    font-size: 50px;
+                    color: blue;
+                    font-family: "calibri", 'Comic Sans';
+                }
+                body{
+                         background: url("https://c1.staticflickr.com/1/458/18252823025_faf4bce3f7_o.jpg") no-repeat center center fixed;
+                         -webkit-background-size: cover;
+                         -moz-background-size: cover;
+                         -o-background-size: cover;
+                         background-size: cover;
+                }
+                p{
+                    color: darkblue;
+                }
+                #home {
+                position: absolute;
+                right: 10%;
+                bottom: 10%;
+                
+                width: 10%;
+                height: 0;
+                padding-bottom: 10%;
+                border-radius: 50%;
+                border: 2px solid #f5f5f5;
+                overflow: hidden;
+                background: #464646;
+                box-shadow: 0 0 3px gray;
+                }
+            
+                #home:hover {
+                    background: #262626;
+                }
+                
+                #home img {
+                    display: block;
+                    width: 76%;
+                    padding: 12%;
+                    height: auto;
+                }
+            </style>
+    </head>
+    <body>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <h align="center">Reference</h>
+        <p>Laura, Newcomer. "29 Smart and Easy Tips to Reduce Food Waste." http://greatist.com/health/how-to-ways-reduce-food-waste <br>
+            Rachel, Meeks. "20 Tips to Waste Less Food." http://smallnotebook.org/2009/07/14/20-tips-to-waste-less-food/ <br>
+            Sarah, Z. Wexler. "10 Tips For Growing Your Own Food In Your Garden." https://www.yahoo.com/food/the-10-tips-for-growing-your-own-food-in-your-118376985826.html <br>
+            Stacey, Johnson. "28 Ways to Save on Food." http://www.rd.com/advice/saving-money/28-ways-to-save-on-food/
+        </p>
+        
+        <div id = "home">
+        <a href="http://fridgewiz.tumblr.com"><img src="http://codeitdown.com/media/Home_Icon.svg" alt="Home" /></a>
+        </div>
+    </body>
+</html>
