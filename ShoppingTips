@@ -13,8 +13,14 @@
                 text-align: center;
             }
             
-            body{
+            /*body{
                 background-color: #33CCFF;
+            }*/
+            body {
+                background: url("https://c2.staticflickr.com/8/7736/18062560590_57d5d8beaa_h.jpg");
+                background-size:100% 100%;
+                background-repeat:no-repeat;
+                background-attachment:fixed;
             }
             
             #home {
@@ -44,8 +50,8 @@
             }
             
             #tiptext{
-                font-size: 30px;
-                color: #FFFFFF; 
+                font-size: 22px;
+                color: #2E47A0;   /*#FFFFFF*/
                 position: absolute;
                 left: 30%;
                 /*top: 35%;*/
@@ -100,7 +106,7 @@
         </script>
         </div>
         
- <a href="http://growyourownfridgewiz.tumblr.com" class= "refresh">&rarr;</a>
+ <a href="http://shopfridgewiz.tumblr.com" class= "refresh">&rarr;</a>
          
        
         </div>
