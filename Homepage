@@ -146,18 +146,6 @@
         </div>
    
     <!--JavaScript code does here -->
-      <script>
-        (function() {
-        var cx = 'XXXXXXXXXX:YYYYYYYYY';
-        var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
-        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
-    })();
-    </script>
-    
-    <div style="width:0px;overflow:hidden;height:0px;"> 
-        <gcse:search></gcse:search>
-    </div>
     
     <div id="searchbox">
         <form id="searchbox_XXXXXXXXXX:YYYYYYYYY" action="">
@@ -166,8 +154,8 @@
             <input value="FORID:11" name="cof" type="hidden"/>
             <input id="q" style="" name="q" size="75" type="text"/>
             <button class="btn">Search</button>
-            <div class = "help"><p2>Welcome to FridgeWiz, the site that teaches you about cooking by providing you with recipes and tips that will be useful in the kitchen. Above, you can find out about who we are, find random tips about cooking and grocceries. On the left of this question mark is a search bar that can you be use to find recipes. In order to use the search bar properly, type in the name of the recipe. If you do not have a specific recipe, you can search by ingredient by putting the quantity of the ingredient and the ingredient name in quotation marks. Ex. "2 Eggs"
-Thank you for visiting our website and we hope you enjoy it!</p2></div>
+            <div class = "help"><p2>Welcome to FridgeWiz, the site that teaches you about cooking by providing you with recipes and tips that will be useful in the kitchen. Above, you can find out about who we are, find random tips about cooking and grocceries. On the left of this question mark is a search bar that can you be use to find recipes. In order to use the search bar properly, type in the name of the recipe. If you do not have a specific recipe, you can search by ingredient by putting the ingredient name (i.e, eggs)
+Thank you for visiting our website and we hope you will enjoy it!</p2></div>
         </form>
     </div>    
     
@@ -183,7 +171,10 @@ Thank you for visiting our website and we hope you enjoy it!</p2></div>
         s.parentNode.insertBefore(gcse, s);
       })();
         </script>
+        
+        <div> 
         <gcse:searchresults-only></gcse:searchresults-only>
+        </div>
 
 <!--New boxes go here -->
 <script language="javascript">function add(type){;var element=document.createElement("input");element.setAttribute("type",type);element.setAttribute("value",type);element.setAttribute("name",type);var foo=document.getElementById("fooBar");foo.appendChild(element);}</script>
