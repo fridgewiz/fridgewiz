@@ -147,39 +147,21 @@
    
     <!--JavaScript code does here -->
     
-    <div id="searchbox">
-        <form id="searchbox_XXXXXXXXXX:YYYYYYYYY" action="">
-        
-            <input value="XXXXXXXXXX:YYYYYYYYY" name="cx" type="hidden"/>
-            <input value="FORID:11" name="cof" type="hidden"/>
-            <input id="q" style="" name="q" size="75" type="text"/>
-            <button class="btn">Search</button>
-            <div class = "help"><p2>Welcome to FridgeWiz, the site that teaches you about cooking by providing you with recipes 
-            and tips that will be useful in the kitchen. Above, you can find out about who we are, find random tips about 
-            cooking and grocceries. On the left of this question mark is a search bar that can you be use to find recipes. 
-            In order to use the search bar properly, type in the name of the recipe. If you do not have a specific recipe, you
-            can search by ingredient by putting the ingredient name (i.e, eggs)
-            Thank you for visiting our website and we hope you will enjoy it!</p2></div>
+		<div id="searchbox">
+		<form action="search.php" method="post">
+  				<p>Search ingredients: <input type="text" name="ingredientsQuery"/>
+  				<input type="submit" value="Search" />
+                <div class = "help"><p2>Welcome to FridgeWiz, the site that teaches you about cooking by providing you with recipes 
+                and tips that will be useful in the kitchen. Above, you can find out about who we are, find random tips about 
+                cooking and grocceries. On the left of this question mark is a search bar that can you be use to find recipes. 
+                In order to use the search bar properly, type in the name of the recipe. If you do not have a specific recipe, you
+                can search by ingredient by putting the ingredient name (i.e, eggs)
+                Thank you for visiting our website and we hope you will enjoy it!</p2>
+          	</p>
+                    
         </form>
-    </div>    
+    </div>   
     
-    <div>
-      <script>
-        (function() {
-        var cx = '001653076749647547486:f35zy_psvga';
-        var gcse = document.createElement('script');
-        gcse.type = 'text/javascript';
-        gcse.async = true;
-        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//cse.google.com/cse.js?cx=' + cx;
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(gcse, s);
-      })();
-        </script>
-        
-        <div> 
-        <gcse:searchresults-only></gcse:searchresults-only>
-        </div>
-
 <!--New boxes go here -->
 <script language="javascript">function add(type){;var element=document.createElement("input");element.setAttribute("type",type);element.setAttribute("value",type);element.setAttribute("name",type);var foo=document.getElementById("fooBar");foo.appendChild(element);}</script>
  
