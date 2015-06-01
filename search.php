@@ -24,13 +24,15 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT,2);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
-$recipeJSON = curl_exec($ch);
+$recipeJSON = curl_exec($ch); //Need to figure out how to parse this
+
+echo $recipeJSON; //example of outplut
 
 
-$result = json_decode($recipeJSON, true);
 
-//temporary stuff. I don't know what I'm doing.
-var_dump($result); 
+//these may be useful?. I don't know what I'm doing.
+//$result = json_decode($recipeJSON, true);
+//var_dump($result); 
 ?>
 </body>
 </html>
