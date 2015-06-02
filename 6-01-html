@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+    function displayAll(content) {
+        var recipes = content.matches;
+        var outputHTML = "";
+        for(i = 0; i < recipes.length; i++)
+        {
+            outputHTML += "<div id='" + recipes[i].id + "' onclick='loadRecipeDetails(this.id)'>" + recipes[i].recipeName + "</div><br>";
+        }
+        document.getElementById('outputRecipes').innerHTML = outputHTML;
+    }
+    
+    function displayOne(content)
+    {
+        var recipes = content.matches;
+        var outputHTML = "";
+        document.getElementById('outputRecipes').innerHTML = outputHTML;
+    }
+    
+    function loadAllRecipes(searchString){
+        var id = "API_ID_GOES_HERE";
+        var key = "API_KEY_GOES_HERE";
+        var yummlyURL = "http://api.yummly.com/v1/api/recipes?callback=displayAll&_app_id=" + id + "&_app_key=" + key;
+        var splitIngr = searchString.split(" ");
+        for(i = 0; i < splitIngr.length; i++)
+        {
+            yummlyURL += "&allowedIngredient[]=" + splitIngr[i];
+        }
+        yummlyURL += "&nutrition.ENERC_KCAL.max=100";
+        yummlyURL += "&maxResult=20&start=0";
+        
+        // create script element
+        var script = document.createElement('script');
+        // adding src with callback name
+        script.src = yummlyURL;
+        // insert script to document and load content
+        document.body.appendChild(script);
+    }
+    
+    function loadRecipeDetails(recipeId)
+    {
+        var id = "API_ID_GOES_HERE";
+        var key = "API_KEY_GOES_HERE";
+        var yummlyURL = "http://api.yummly.com/v1/api/recipe/" + recipeId + "?callback=displayOne&_app_id=" + id + "&_app_key=" + key;
+        
+        // create script element
+        var script = document.createElement('script');
+        // adding src with callback name
+        script.src = yummlyURL;
+        // insert script to document and load content
+        document.body.appendChild(script);
+    }
+</script>
+</head>
+<body>
+
+
+<div>
+    <input id="searchbar"></input>
+    <input type="button" value="Search" onclick="loadAllRecipes(document.getElementById('searchbar').value)" ></input>
+</div>
+<br>
+<div id="outputRecipes">
+    
+</div>
+<br>
+<div id="outputOne">
+    
+</div>
+ 
+    </body>
+
+</html>
+
+
