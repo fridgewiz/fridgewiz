@@ -77,8 +77,8 @@
     function loadAllRecipes(searchString){
         sortBy = document.getElementById("sortBy");
         sortBy = sortBy[sortBy.selectedIndex].id;
-        var id = "ac71fb76";
-        var key = "d52dd4bc4c6735675551f9779e2e8b4d";
+        var id = "YOUR_ID_GOES_HERE";
+        var key = "YOUR_KEY_GOES_HERE";
         var yummlyURL = "http://api.yummly.com/v1/api/recipes?callback=displayAll&_app_id=" + id + "&_app_key=" + key;
         var splitIngr = searchString.split(" ");
         for(i = 0; i < splitIngr.length; i++)
@@ -98,8 +98,8 @@
     //may not use
     function loadRecipeDetails(recipeId)
     {
-        var id = "ac71fb76";
-        var key = "d52dd4bc4c6735675551f9779e2e8b4d";
+        var id = "YOUR_ID_GOES_HERE";
+        var key = "YOUR_KEY_GOES_HERE";
         var yummlyURL = "http://api.yummly.com/v1/api/recipe/" + recipeId + "?callback=displayOne&_app_id=" + id + "&_app_key=" + key;
         
         // create script element
