@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+    var sortBy = "";
+    
+    function insertionSort(pRecipes, pSortBy)
+    {
+        var len = pRecipes.length, value, i, j;
+        
+        //TODO: would like to do pRecipes[i].pSortBy to avoid writing insertionsort for every sorting option...
+        
+        if (pSortBy == "totalTimeInSeconds")
+        {
+            for (i = 0; i < len; i++)
+                {
+                    value = pRecipes[i].totalTimeInSeconds; 
+                    for (j=i-1; j > -1 && pRecipes[j].totalTimeInSeconds > value; j--) {
+                        pRecipes[j+1].totalTimeInSeconds = pRecipes[j].totalTimeInSeconds;
+                    }
+            
+                    pRecipes[j+1].totalTimeInSeconds = value;
+                }
+        }
+        if (pSortBy == "rating")
+        {
+            for (i = 0; i < len; i++)
+                {
+                    value = pRecipes[i].rating;
+                    for (j=i-1; j > -1 && pRecipes[j].rating > value; j--) {
+                        pRecipes[j+1].rating = pRecipes[j].rating;
+                    }
+            
+                    pRecipes[j+1].rating = value;
+                }
+        }
+
+        return pRecipes;
+    }
+    
+    function displayAll(content) {
+        var recipes = content.matches;
+        var outputHTML = "";
+        if(sortBy != "relevance")
+        {
+            recipes = insertionSort(recipes, sortBy);
+        }
+        for(i = 0; i < recipes.length; i++)
+        {
+            outputHTML += "<a href='http://www.yummly.com/recipe/external/" + recipes[i].id + "' target='_blank'>" + recipes[i].recipeName + " " + recipes[i].totalTimeInSeconds + " " + recipes[i].rating + "</a><br>";
+        }
+        document.getElementById('outputRecipes').innerHTML = outputHTML;
+    }
+    
+    //may not use
+    function displayOne(content)
+    {
+        var outputHTML = "";
+        var calories;
+        var servingSize;
+        var time;
+        var rating;
+        //calorie count
+        
+        for(i = 0; i < content.nutritionEstimates.length; i++)
+        {
+            if (content.nutritionEstimates[i].attribute == 'ENERC_KCAL')
+            {
+                calories = content.nutritionEstimates[i].value;
+                break;
+            }
+        }
+        
+        document.getElementById('outputRecipes').innerHTML = outputHTML;
+    }
+    
+    function loadAllRecipes(searchString){
+        sortBy = document.getElementById("sortBy");
+        sortBy = sortBy[sortBy.selectedIndex].id;
+        var id = "ac71fb76";
+        var key = "d52dd4bc4c6735675551f9779e2e8b4d";
+        var yummlyURL = "http://api.yummly.com/v1/api/recipes?callback=displayAll&_app_id=" + id + "&_app_key=" + key;
+        var splitIngr = searchString.split(" ");
+        for(i = 0; i < splitIngr.length; i++)
+        {
+            yummlyURL += "&allowedIngredient[]=" + splitIngr[i];
+        }
+        yummlyURL += "&maxResult=20&start=0";
+        
+        // create script element
+        var script = document.createElement('script');
+        // assing src with callback name
+        script.src = yummlyURL;
+        // insert script to document and load content
+        document.body.appendChild(script);
+    }
+    
+    //may not use
+    function loadRecipeDetails(recipeId)
+    {
+        var id = "ac71fb76";
+        var key = "d52dd4bc4c6735675551f9779e2e8b4d";
+        var yummlyURL = "http://api.yummly.com/v1/api/recipe/" + recipeId + "?callback=displayOne&_app_id=" + id + "&_app_key=" + key;
+        
+        // create script element
+        var script = document.createElement('script');
+        // assing src with callback name
+        script.src = yummlyURL;
+        // insert script to document and load content
+        document.body.appendChild(script);
+    }
+</script>
+</head>
+<body>
+
+
+<div>
+    <input id="searchbar"></input>
+    <input type="button" value="Search" onclick="loadAllRecipes(document.getElementById('searchbar').value)" ></input>
+    <select id="sortBy">
+        <option id="relevance" selected>Relevance</option>
+        <option id="totalTimeInSeconds">Time to Make</option>
+        <option id="rating">Rating</option>
+    </select>
+</div>
+<br>
+<div id="outputRecipes">
+    
+</div>
+<br>
+<div id="outputOne">
+    
+</div>
+ 
+    </body>
+
+</html>
