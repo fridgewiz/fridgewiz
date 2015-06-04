@@ -8,19 +8,16 @@
         <style>
             h1{
                 font-size: 50px;
-                color: #00000;
+                color: white;
                 font-family: "calibri", 'Comic Sans';
                 text-align: center;
             }
-            
-            /*body{
-                background-color: #33CCFF;
-            }*/
+
              body {
-                background: url("https://c2.staticflickr.com/8/7736/18062560590_57d5d8beaa_h.jpg");
-                background-size:100% 100%;
-                background-repeat:no-repeat;
-                background-attachment:fixed;
+             background: url("https://c1.staticflickr.com/9/8812/17746914644_80649bd651_o.jpg");
+            background-size:100% 100%;
+            background-repeat:no-repeat;
+            background-attachment:fixed;
             }
             
             #home {
@@ -49,7 +46,7 @@
             
             #tiptext{
                 font-size: 22px;
-                color: #2E47A0; /*#FFFFFF*/
+                color: white; 
                 position: absolute;
                 left: 30%;
                 margin-top: 20px;
@@ -60,6 +57,7 @@
             
             
             a.refresh{
+                color: white;
                 text-decoration: none;
                 font-size: 100px;
                 vertical-align: middle;
