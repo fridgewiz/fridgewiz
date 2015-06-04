@@ -2,125 +2,66 @@
 <html>
     <head>
         <meta charset = "utf-8">
-        <title>Grow Your Own</title>
-
-        <!--CSS code goes here-->
-        <style>
-            h1 {
-                font-size: 50px;
-                color: white;
-                font-family: "calibri", 'Comic Sans';
-                text-align: center;
-            }
-            
-            body {
-                background: url(https://c1.staticflickr.com/9/8812/17746914644_80649bd651_o.jpg);
-                background-size:100% 100%;
-                background-repeat:no-repeat;
-                background-attachment:fixed;
-            }
-            
-            #home {
+            <title>Reference</title>
+        
+            <!--CSS code goes here-->
+            <style>
+                h1{
+                    font-size: 50px;
+                    color: white;
+                    font-family: "calibri", 'Comic Sans';
+                    text-align: center;
+                }
+                body{
+                background: url("https://c4.staticflickr.com/8/7746/18381736936_d3f34888cb_o.jpg")no-repeat center center fixed;
+                 background-size: 100% 100% 
+                }
+                p{
+                    color: white;
+                    font-size: 20px;
+                    position: absolute;
+                    left: 10%;
+                    right: 10%;
+                    text-align: justify;
+                }
+                #home {
                 position: absolute;
-                left: 10%;
-                top: 200px;
-                width: 100px;
-                height: 100px;
+                right: 10%;
+                bottom: 10%;
+                
+                width: 5%;
+                height: 0;
+                padding-bottom: 5%;
                 border-radius: 50%;
                 border: 2px solid #f5f5f5;
                 overflow: hidden;
                 background: #464646;
                 box-shadow: 0 0 3px gray;
-            }
+                }
             
-            #home:hover {
-                background: #262626;
-            }
-            
-            #home img {
-                display: block;
-                width: 76%;
-                padding: 12%;
-                height: auto;
-            }
-            
-                        
-            #tiptext{
-                font-size: 22px;
-                color: white; 
-                position: absolute;
-                left: 30%;
-                right: 30%;
-                margin-top: 20px;
-                height: auto;
-                width: auto;
-            }
-            
-            
-            a.refresh{
-                color: white;
-                text-decoration: none;
-                font-size: 100px;
-                vertical-align: middle;
-                position: absolute;
-                top: 200px;
-                right: 10%;
-            }
-            
-            a.refresh:hover{
-                color: red;
-            }
-        </style>
+                #home:hover {
+                    background: #262626;
+                }
+                
+                #home img {
+                    display: block;
+                    width: 76%;
+                    padding: 12%;
+                    height: auto;
+                }
+            </style>
     </head>
-    
     <body>
-        <h1><b>Grow Your Own</h1></b>
-        <div>
-            <div id = "home">
-                <a href="http://fridgewiz.tumblr.com"><img src="http://codeitdown.com/media/Home_Icon.svg" alt="Home" /></a>
-                </div>
-        <div id="tiptext">
-        <script language="JavaScript">
+        <br><br><br><br><br><br><br><br><br><br>
+        <h1 align="center">Reference</h1>
+        <p>Laura, Newcomer. "29 Smart and Easy Tips to Reduce Food Waste." http://greatist.com/health/how-to-ways-reduce-food-waste <br>
+            Rachel, Meeks. "20 Tips to Waste Less Food." http://smallnotebook.org/2009/07/14/20-tips-to-waste-less-food/ <br>
+            Sarah, Z. Wexler. "10 Tips For Growing Your Own Food In Your Garden." https://www.yahoo.com/food/the-10-tips-for-growing-your-own-food-in-your-118376985826.html <br>
+            Stacey, Johnson. "28 Ways to Save on Food." http://www.rd.com/advice/saving-money/28-ways-to-save-on-food/
+        </p>
         
-        var r_text = new Array ();
-        r_text[0] = " Work with the space you have: Do you have flower pots or a flower bed? Those spaces would work just as well for other kinds of plants. Peterson suggests adding some vegetables to those spaces. Even if flowers and vegetables share the same space, food can still grow.";
-        
-        r_text[1] = " Plant a fruit tree: Peterson's favorite suggestion for growing food in your yard is planting a fruit tree (if your space permits). Once planted, they will produce fruit for decades. If you live in a colder climate, you might think this isn't for you, but consider options like apple or pear trees, which will manage cooler winters.";
-        
-        r_text[2] = " Don't Overthink It: There's just no need to overcomplicate how a seed buried in the soil basking in the sun getting watered from time to time begins to grow. It just happens so begin right there.";
-        
-        r_text[3] = "Check On It Frequently: Just make sure your new friends are getting enough sun and water. I would recommend watering them once a day unless the soil feels damp to the touch, then let it dry out a bit.";
-        
-        r_text[4] = " Work with the space you have: Do you have flower pots or a flower bed? Those spaces would work just as well for other kinds of plants. Peterson suggests adding some vegetables to those spaces. Even if flowers and vegetables share the same space, food can still grow.";
-        
-        r_text[5] = " Build raised beds: Pick a part of your yard that gets full sun (that’s four to six hours a day), and construct — or buy pre-made — raised beds. They’re easier to weed and warm up faster than the ground, so you can start planting earlier and get better results. It’s also easy to attach hoops to a raised bed that you can cover in case of cold nights or pests like moths or birds.";
-        
-        r_text[6] = " Fill with good soil: Buy potting soil and mix in native soil from the yard as well as compost, mixing so the ratio is half compost, half soil. Mix in a dry organic fertilizer, which is good for long-term feeding, like E.B. Stone Organics Sure-Start, though you’ll still need to add compost every year to replenish your soil. Since vegetables like a close-to-neutral pH soil, buy a pH testing kit at the nursery and see if your soil is neutral. It’s often too acidic; if so, add lime.";
-        
-        r_text[7] = " Wait for warm nights: In spring, it’s generally safe to plant greens (lettuces, spinach, kale, Swiss chard), cabbage, broccoli, Brussels sprouts, and peas. Plant other veggies too soon and you could kill your starters, so hold off until nighttime temperatures stay above 55 before planting peppers, tomatoes, and squash. The most cold-sensitive plants are melons and cucumbers, so plant those last, only when you’re fairly sure temps won’t dip again.";
-        
-        r_text[8] = " Sequester your alliums: Alliums including onions, chives, shallots, leeks, and garlic are so much more fragrant and delicious from your own garden, but they tend not to play well with others; they can have negative effects on artichokes, asparagus, many kinds of beans, lettuces, and peas. Plant your alliums in separate containers or at least two to three rows away from its foes and it won’t be a problem.";
-        
-        r_text[9] = " Plant a mix of vegetables that mature over different time frames. That way you’ll have a steady stream of produce over the whole season, rather than so much ripening at once that you’re scrambling to use it all before it goes bad. The little plastic sign that comes with the plant will tell you the average number of days before it matures; at the nursery, look for a mix of traditional and early-maturing plants to spread your haul throughout the season.";
-        
-        r_text[10] = " Consider companion planting: This is a technique of pairing plants together that can benefit from being near each other. For example, basil generally thrives when planted next to tomatoes or peppers, but not as well when its neighbors are beans or cucumbers; find the whole list of happy plant pairings here. Generally, root vegetables like radishes, beets, and carrots do well when planted between leafy greens, since the root veggies take up a lot of space under the soil, while lettuces don’t have very deep roots.";
-        
-        r_text[11] = " Follow spacing guidelines: The plastic signs that come with your plants will give a guideline of how much “personal space” each needs from the plants around it. Rather than thinking you’ll get more veggies if you just pack more of them into your raised bed, crowding them in can reduce air circulation, leading to pests like aphids. If the plant’s instructions say three inches, give it at least three inches, and consider it room to grow.";
-        
-        r_text[12] = " Plant flowers, too: No, you’re not going to eat them, but flowers like marigolds are more than a pretty touch. Though it’s a myth that they keep bugs away, marigolds actually do help your veggies thrive by attracting beneficial insects to your garden.";
-        
-        r_text[13] = " Check On It Frequently: Just make sure your new friends are getting enough sun and water. I would recommend watering them once a day unless the soil feels damp to the touch, then let it dry out a bit.";
-        
-        r_text[13] = " Close up shop: After you’ve harvested your crops and you’re putting your garden to bed for the season, get rid of dead foliage to avoid pests, then cover with a thick layer of compost. Or, plant beneficial cover crops like vetch (in the legume family) or beautiful red-topped crimson clover; when you turn it under in the spring, it will add nitrogen and other nutrients to your soil — making for an even better garden next year.";
-
-        var i = Math.floor(13*Math.random())
-        
-        document.write(r_text[i]);
-        </script>
+        <div id = "home">
+        <a href="http://fridgewiz.tumblr.com"><img src="http://codeitdown.com/media/Home_Icon.svg" alt="Home" /></a>
         </div>
-        
-        <a href="http://growyourownfridgewiz.tumblr.com" class= "refresh">&rarr;</a>
-       
-      </div>  
     </body>
 </html>
