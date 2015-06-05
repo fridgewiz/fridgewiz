@@ -201,7 +201,12 @@
                 var splitIngr = searchString.split(" ");
                 for(i = 0; i < splitIngr.length; i++)
                 {
-                    yummlyURL += "&allowedIngredient[]=" + splitIngr[i];
+                	if(splitIngr[i].substr(0,1) == "-"){
+                		yummlyURL += "&excludedIngredient[]=" + splitIngr[i].substring(1, splitIngr[i].length);
+                  }
+                  else{
+                  	yummlyURL += "&allowedIngredient[]=" + splitIngr[i];
+                  }
                 }
                 yummlyURL += "&maxResult=20&start=0";
                 
