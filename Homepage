@@ -78,6 +78,7 @@
                     height: 400px !important; 
                     margin-top: 30px; 
                     overflow-y: none;
+                    color: #fff
                 }
                 }
                 ul{
@@ -176,8 +177,9 @@
         
             
             function displayAll(content) {
+                var attribution = content.attribution
                 var recipes = content.matches;
-                var outputHTML = "";
+                var outputHTML = attribution.html + "<br />";
                 if(sortBy != "relevance")
                 {
                     recipes = insertionSort(recipes, sortBy);
@@ -188,7 +190,7 @@
                     {
                         if(recipes[i].totalTimeInSeconds != null)
                         {
-                        outputHTML += "<a href='http://www.yummly.com/recipe/external/" + recipes[i].id + "' target='_blank'>" + recipes[i].recipeName + " " + recipes[i].totalTimeInSeconds / 60 + "min " + Array(recipes[i].rating + 1).join('\u2605') + "</a><br>";
+                        outputHTML += "<a href='http://www.yummly.com/recipe/external/" + recipes[i].id + "' target='_blank'>" + recipes[i].recipeName + " " + recipes[i].totalTimeInSeconds / 60 + "min " + Array(recipes[i].rating + 1).join('\u2605') + "</a>" + " Source: " + recipes[i].sourceDisplayName + "<br />";
                         }
                         
                     }
@@ -199,7 +201,7 @@
                     {
                         if(recipes[i].totalTimeInSeconds != null)
                         {
-                        outputHTML += "<a href='http://www.yummly.com/recipe/external/" + recipes[i].id + "' target='_blank'>" + recipes[i].recipeName + " " + recipes[i].totalTimeInSeconds / 60 + "min " + Array(recipes[i].rating + 1).join('\u2605') + "</a><br>";
+                        outputHTML += "<a href='http://www.yummly.com/recipe/external/" + recipes[i].id + "' target='_blank'>" + recipes[i].recipeName + " " + recipes[i].totalTimeInSeconds / 60 + "min " + Array(recipes[i].rating + 1).join('\u2605') + "</a>" + " Source: " + recipes[i].sourceDisplayName + "<br />";
                         }
                          
                     }   
