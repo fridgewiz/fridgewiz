@@ -106,8 +106,11 @@
                     border-color: white;
     
                 }
-    
-                 li ul.hidden li a{
+                .menu a:hover{
+                    background: grey; 
+                }
+
+                 /*li ul.hidden li a{
                     padding: 8px 15px 8px 15px;
                     width:130px;
                     text-align: left;
@@ -125,10 +128,13 @@
                     display: block;
                 }
     
-                 ul li a:hover{
+                ul li a:hover{
                     background: grey; 
-                }
+                }*/
+                
             </style>
+            
+            
         <script type="text/javascript">
             var sortBy = "";
             
@@ -195,15 +201,15 @@
                         {
                         outputHTML += "<a href='http://www.yummly.com/recipe/external/" + recipes[i].id + "' target='_blank'>" + recipes[i].recipeName + " " + recipes[i].totalTimeInSeconds / 60 + "min " + Array(recipes[i].rating + 1).join('\u2605') + "</a><br>";
                         }
-                        
-                    }
+                         
+                    }   
                 }
                 var results = document.getElementById('outputRecipes');
                 results.innerHTML = outputHTML;
-                
-                if (results.scrollHeight > results.clientHeight)
+                 
+                if (results.scrollHeight > results.clientHeight) 
                 {
-                    results.setAttribute("style", "height: 400px !important; margin-top: 30px; overflow-y: scroll");
+                    results.setAttribute("style","height: 370px !important; margin-top: 30px; overflow-y: scroll;");
                 }
                 
             }
@@ -235,17 +241,17 @@
             function loadAllRecipes(searchString){
                 sortBy = document.getElementById("sortBy");
                 sortBy = sortBy[sortBy.selectedIndex].id;
-                var id = "ID goes here";
-                var key = "Key goes here";
+                var id = "ac71fb76";
+                var key = "d52dd4bc4c6735675551f9779e2e8b4d";
                 var yummlyURL = "http://api.yummly.com/v1/api/recipes?callback=displayAll&_app_id=" + id + "&_app_key=" + key;
                 var splitIngr = searchString.split(" ");
                 for(i = 0; i < splitIngr.length; i++)
                 {
                 	if(splitIngr[i].substr(0,1) == "-"){
-                		yummlyURL += "&excludedIngredient[]=" + splitIngr[i].substring(1, splitIngr[i].length);
+                		yummlyURL += "&excludedIngredient[]=" + splitIngr[i].substring(1, splitIngr[i].length).toLowerCase();
                   }
                   else{
-                  	yummlyURL += "&allowedIngredient[]=" + splitIngr[i];
+                  	yummlyURL += "&allowedIngredient[]=" + splitIngr[i].toLowerCase();
                   }
                 }
                 yummlyURL += "&maxResult=100&start=0";
@@ -261,8 +267,8 @@
             //may not use
             function loadRecipeDetails(recipeId)
             {
-                var id = "ID goes here";
-                var key = "Key goes here";
+                var id = "ac71fb76";
+                var key = "d52dd4bc4c6735675551f9779e2e8b4d";
                 var yummlyURL = "http://api.yummly.com/v1/api/recipe/" + recipeId + "?callback=displayOne&_app_id=" + id + "&_app_key=" + key;
                 
                 // create script element
@@ -271,6 +277,17 @@
                 script.src = yummlyURL;
                 // insert script to document and load content
                 document.body.appendChild(script);
+            }
+            
+              function displayResult(){
+                loadAllRecipes(document.getElementById('searchbar').value);
+            }
+            
+             function entered(event) {
+             if (event.keyCode == 13) {
+                displayResult();
+                return false;
+                }
             }
         </script>
     </head>
@@ -286,22 +303,22 @@
             </div>
     
     <div id="searchbox">
-        <input id="searchbar" style="width: 300px"></input>
-        <input type="button" value="Search" onclick="loadAllRecipes(document.getElementById('searchbar').value)" ></input>
+        <input id="searchbar" style="width: 300px" onkeypress="return entered(event)"></input>
+        <input type="button" value="Search" onclick="displayResult()" ></input>
         <select id="sortBy">
             <option id="relevance" selected>Relevance</option>
             <option id="totalTimeInSeconds">Time to Make</option>
             <option id="rating">Rating</option>
         </select><nobr></nobr>
-         <div class = "help"><p2>Welcome to FridgeWiz, the site that teaches you about cooking by providing you with recipes and tips that will be useful in the kitchen. Above, you can find out about who we are, find random tips about cooking and grocceries. On the left of this question mark is a search bar that can you use to find recipes. In order to use the search bar properly, type in the name of the ingredient you want to use. You can search by ingredient by putting the ingredient name (i.e, eggs)
+         <div class = "help"><p2>Welcome to FridgeWiz, the site that teaches you about cooking by providing you with recipes and tips that will be useful in the kitchen. Above, you can find out about who we are, find random tips about cooking and grocceries. On the left of this question mark is a search bar that can you use to find recipes. In order to use the search bar properly, type in the name of the ingredient you want to use. You can search by ingredient by putting the ingredient names, separate by commas (i.e, eggs, butter).
     Thank you for visiting our website and we hope you will enjoy it!</p2></div>
        
     </div>
     <br>
+
      <div id="outputRecipes" class="outputrecipes">
         
     </div>
-
         
     </body>
 </html>
