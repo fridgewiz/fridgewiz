@@ -333,7 +333,7 @@
             <option id="totalTimeInSeconds">Time to Make</option>
             <option id="rating">Rating</option>
         </select><nobr></nobr>
-         <div class = "help"><p2>Welcome to FridgeWiz, the site that teaches you about cooking by providing you with recipes and tips that will be useful in the kitchen. To the right, you can find out about who we are, find random tips about cooking and grocceries. On the left of this question mark is a search bar that can you use to find recipes. In order to use the search bar properly, type in the names of the ingredients you want to use, separated by space (i.e, eggs butter banana). You can also click on the dropdown menu to choose the sorting options.
+         <div class = "help"><p2>Welcome to FridgeWiz, the site that teaches you about cooking by providing you with recipes and tips that will be useful in the kitchen. To the right, you can find out about who we are and get random tips about cooking and groceries. The search bar to the left can help you find recipes by ingredient. In order to search, type in the names of the ingredients you want to use, separated by space (i.e, eggs butter banana). You can also exclude ingredients by placing a minus symbol (-) before the ingredient name (i.e. -peanuts) and click on the dropdown menu to choose the sorting options.
     Thank you for visiting our website and we hope you will enjoy it!</p2></div>
        
     </div>
