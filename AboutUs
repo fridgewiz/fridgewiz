@@ -35,8 +35,9 @@
              }
             #home {
                 position: absolute;
+                top:550px;
                 right: 10%;
-                bottom: 20%;
+                /*bottom: 20%;*/
                 width: 5%;
                 height: 0;
                 padding-bottom: 5%;
@@ -71,7 +72,8 @@
         
         
         <br> <br>
-        <div id = "home" style="float: right; position: absolute; bottom: 20%; right: 10%">
+        <div id = "home" style="float: right; position: fixed; bottom: 20%; right: 10%">
+       
         <a href="http://fridgewiz.tumblr.com"><img src="http://codeitdown.com/media/Home_Icon.svg" alt="Home" /></a>
         <!--<div id="home">
        <a href="http://fridgewiz.tumblr.com" style="color: white; ">Back to Home Page</a>-->
