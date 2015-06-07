@@ -6,29 +6,31 @@
         
             <!--CSS code goes here-->
             <style>
-                h{
+                h1{
                     font-size: 50px;
-                    color: blue;
+                    color: white;
                     font-family: "calibri", 'Comic Sans';
+                    text-align: center;
                 }
                 body{
-                         background: url("https://c1.staticflickr.com/1/458/18252823025_faf4bce3f7_o.jpg") no-repeat center center fixed;
-                         -webkit-background-size: cover;
-                         -moz-background-size: cover;
-                         -o-background-size: cover;
-                         background-size: cover;
+                background: url("https://c4.staticflickr.com/8/7746/18381736936_d3f34888cb_o.jpg")no-repeat center center fixed;
+                 background-size: 100% 100%; 
                 }
                 p{
-                    color: darkblue;
+                    color: white;
+                    font-size: 20px;
+                    position: absolute;
+                    left: 10%;
+                    right: 10%;
+                    text-align: justify;
                 }
                 #home {
                 position: absolute;
                 right: 10%;
-                bottom: 10%;
-                
-                width: 10%;
+                bottom: 20%;
+                width: 5%;
                 height: 0;
-                padding-bottom: 10%;
+                padding-bottom: 5%;
                 border-radius: 50%;
                 border: 2px solid #f5f5f5;
                 overflow: hidden;
@@ -49,15 +51,20 @@
             </style>
     </head>
     <body>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
-        <h align="center">Reference</h>
+        <br><br><br><br><br><br><br><br><br><br>
+        <h1 align="center">Reference</h1>
         <p>Laura, Newcomer. "29 Smart and Easy Tips to Reduce Food Waste." http://greatist.com/health/how-to-ways-reduce-food-waste <br>
             Rachel, Meeks. "20 Tips to Waste Less Food." http://smallnotebook.org/2009/07/14/20-tips-to-waste-less-food/ <br>
             Sarah, Z. Wexler. "10 Tips For Growing Your Own Food In Your Garden." https://www.yahoo.com/food/the-10-tips-for-growing-your-own-food-in-your-118376985826.html <br>
             Stacey, Johnson. "28 Ways to Save on Food." http://www.rd.com/advice/saving-money/28-ways-to-save-on-food/
         </p>
         
-        <div id = "home">
+                    <!-- <div id = "home" style="float: right; position: absolute; bottom: 20%; right: 10%">
+        <a href="http://fridgewiz.tumblr.com"><img src="http://codeitdown.com/media/Home_Icon.svg" alt="Home" /></a>
+        <!--<a href="http://fridgewiz.tumblr.com" style="color: white; ">Back to Home Page</a>
+        </div>-->
+        <br> <br>
+         <div id = "home">
         <a href="http://fridgewiz.tumblr.com"><img src="http://codeitdown.com/media/Home_Icon.svg" alt="Home" /></a>
         </div>
     </body>
