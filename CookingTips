@@ -8,16 +8,14 @@
         <style>
             h1{
                 font-size: 50px;
-                color: #00000;
+                color: white;
                 font-family: "calibri", 'Comic Sans';
                 text-align: center;
             }
             
-            /*body{
-                background-color: #33CCFF;
-            }*/
+
              body {
-                background: url("https://c2.staticflickr.com/8/7736/18062560590_57d5d8beaa_h.jpg");
+                background: url("https://c1.staticflickr.com/9/8812/17746914644_80649bd651_o.jpg");
                 background-size:100% 100%;
                 background-repeat:no-repeat;
                 background-attachment:fixed;
@@ -50,7 +48,7 @@
             
             #tiptext{
                 font-size: 22px;
-                color:#2E47A0; 
+                color: white;  
                 position: absolute;
                 left: 30%;
                 margin-top: 20px;
@@ -61,6 +59,7 @@
             
             
             a.refresh{
+                color: #D0D0D0;
                 text-decoration: none;
                 font-size: 100px;
                 vertical-align: middle;
@@ -77,10 +76,10 @@
     
     <body>
         <h1><b>Cooking Tips</b></h1>
-        <div>
-             <div id = "home">
-                <a href="http://fridgewiz.tumblr.com" class="home"><img src="http://codeitdown.com/media/Home_Icon.svg" alt="Home" /></a>
-             </div>
+             <div id = "home" style="float: right; position: absolute; bottom: 50%; right: 10%">
+        <a href="http://fridgewiz.tumblr.com"><img src="http://codeitdown.com/media/Home_Icon.svg" alt="Home" /></a>
+       <!-- <a href="http://fridgewiz.tumblr.com" style="color: white; ">Back to Home Page</a>-->
+        </div>
           <div id="tiptext">
         <script language="JavaScript">
         
@@ -120,7 +119,7 @@
         </script>
         </div>
         
-        <a href="http://growyourownfridgewiz.tumblr.com" class= "refresh">&rarr;</a>
+        <a href="http://cookfridgewiz.tumblr.com" class= "refresh">&rarr;</a>
          
         
        </div>
