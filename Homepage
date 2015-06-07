@@ -1,187 +1,347 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset = "utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>FridgeWiz</title>
+    <style>
+                /* unvisited link */
+                a{
+                    color: #80C0FF;
+                }
+                p{
+                    text-align: center;
+                }
+    
+                
+                .help{
+                    position: absolute;
+                    top: 0px;
+                    right: -30px;
+                    text-align: center;
+                    background-color: #505050 ;
+                    border-radius: 50%;
+                    width: 24px;
+                    height: 24px;
+                    font-size: 14px;
+                    line-height: 26px;
+                    cursor: default;
+                }
+                
+                .help:before{
+                    content: '?';
+                    font-weight: bold;
+                    color:#fff;
+                }
+                
+                .help:hover p2{
+                    display:block;
+                    transform-origin: 100% 0%;
+                }
+                
+                .help p2{	
+                    z-index: 2;
+                    display: none;
+                    text-align: left;
+                    background-color: #1E2021;
+                    padding: 20px;
+                    width: 240px;
+                    position: absolute;
+                    border-radius: 3px;
+                    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+                    right: -4px;
+                    color: #FFF;
+                    font-size: 13px;
+                    line-height: 1.4;
+                    left: 50px;
+                } 
+                
+                .help p2:after{ /* Prevents the tooltip from being hidden */
+                    width:100%;
+                    height:40px;
+                    content:'';
+                    position: absolute;
+                    top:-40px;
+                    left:0;
+                }
+                body {
+                    background: url("https://c4.staticflickr.com/8/7746/18184133799_de5b09a565_o.jpg") no-repeat;
+                    background-position: 0px 20%;
+                    background-color: black;
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover;
 
-        <!--CSS code goes here-->
-        <style>
-            h1{
-                 text-align: center;
-                 color: red;
-            }
-            p{
-                text-align: center;
-            }
+                }
+                
+                 #searchbox{
+                    position: fixed;
+                     top: 61%;  
+                    left: 35%;
+                }
+                 
+                #outputRecipes{
+                    height: 32.407407407% !important; 
+                    width: 58%;
+                    position:fixed;
+                    top: 64%;
+                    left: 20%;    
+                    /*right:20%; */
+                    margin-top: 30px;  
+                    margin-right: 160px;
+                    white-space: nowrap;
+                    overflow-x: none;
+                    overflow-y: none;
+                    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-variant: normal;
+                    line-height: 50px;
+                    color: #fff;
+                }
+                }
+                ul{
+                    list-style-type: none;
+                    font-size:20px;
+                    padding: 10px;
+                }
+    
+                ul li{
+                    display:block;
+                    float:left;
+                    position: relative;
+                    width:160px;
+                }
+    
+                .menu a{
+                    display: block;
+                    text-decoration: none;
+                    padding:8px 8px 8px 8px; 
+                    padding
+                    background: black; 
+                    color:white; 
+                    margin-left:1px;
+                    text-align: center;
+                    border-style: solid;
+                    border-color: white;
+                    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+                    font-style: bold;
+    
+                }
+                .menu a:hover{
+                    background: grey; 
+                }
+
+                 /*li ul.hidden li a{
+                    padding: 8px 15px 8px 15px;
+                    width:130px;
+                    text-align: left;
+                }
+    
+                li ul.hidden{
+                    position: absolute;
+                    font-size:0.74em;
+                    padding:0;
+                    margin:0;
+                    display: none;
+                }
+    
+               li.submenu:hover ul.hidden{
+                    display: block;
+                }
+    
+                ul li a:hover{
+                    background: grey; 
+                }*/
+                
+            </style>
             
-            .help{
-                position: absolute;
-                top: 0px;
-                right: -30px;
-                text-align: center;
-                background-color: #6699FF;
-                border-radius: 50%;
-                width: 24px;
-                height: 24px;
-                font-size: 14px;
-                line-height: 26px;
-                cursor: default;
-            }
             
-            .help:before{
-                content: '?';
-                font-weight: bold;
-                color:#fff;
-            }
+        <script type="text/javascript">
+            var sortBy = "";
             
-            .help:hover p2{
-                display:block;
-                transform-origin: 100% 0%;
+            function insertionSort(pRecipes, pSortBy)
+            {
+                var len = pRecipes.length, value, i, j;
+                
+                //TODO: would like to do pRecipes[i].pSortBy to avoid writing insertionsort for every sorting option...
+                
+                if (pSortBy == "totalTimeInSeconds")
+                {
+                    for (i = 0; i < len; i++)
+                        {
+                            value = pRecipes[i].totalTimeInSeconds; 
+                            ele = pRecipes[i];
+                            for (j=i-1; j > -1 && pRecipes[j].totalTimeInSeconds > value; j--) {
+                                pRecipes[j+1] = pRecipes[j];
+                            }
+                    
+                            pRecipes[j+1] = ele;
+                        }
+                }
+                if (pSortBy == "rating")
+                {
+                    for (i = 0; i < len; i++)
+                        {
+                            value = pRecipes[i].rating; 
+                            ele = pRecipes[i];
+                            for (j=i-1; j > -1 && pRecipes[j].rating > value; j--) {
+                                pRecipes[j+1] = pRecipes[j];
+                            }
+                    
+                            pRecipes[j+1] = ele;
+                        }
+                }
+        
+                return pRecipes;
             }
+        
             
-            .help p2{	/* The tooltip */
-                display: none;
-                text-align: left;
-                background-color: #1E2021;
-                padding: 20px;
-                width: 300px;
-                position: absolute;
-                border-radius: 3px;
-                box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-                right: -4px;
-                color: #FFF;
-                font-size: 13px;
-                line-height: 1.4;
-            }
-            
-            .help p2:after{ /* Prevents the tooltip from being hidden */
-                width:100%;
-                height:40px;
-                content:'';
-                position: absolute;
-                top:-40px;
-                left:0;
-            }
-            body {
-                background: url("https://c2.staticflickr.com/8/7736/18062560590_57d5d8beaa_h.jpg");
-                background-size:100% 350px;
-                background-repeat:no-repeat;
-                background-attachment:fixed;
-                background-position:top
-            }
-            
-             #searchbox{
-                position: absolute;
-                top: 400px; 
-                left: 350px; 
+            function displayAll(content) {
+                var attribution = content.attribution
+                var recipes = content.matches;
+                var outputHTML = attribution.html + "<br />";
+                if(sortBy != "relevance")
+                {
+                    recipes = insertionSort(recipes, sortBy);
+                }
+                if(sortBy == "rating")
+                {
+                    for(i = recipes.length - 1; i >= 0; i--)
+                    {
+                        if(recipes[i].totalTimeInSeconds != null)
+                        {
+                        outputHTML += "<a href='http://www.yummly.com/recipe/external/" + recipes[i].id + "' target='_blank'>" + recipes[i].recipeName + " " + recipes[i].totalTimeInSeconds / 60 + "min " + Array(recipes[i].rating + 1).join('\u2605') + "</a>" + " Source: " + recipes[i].sourceDisplayName + "<br />";
+                        }
+                        
+                    }
+                }
+                else
+                {
+                    for(i = 0; i < recipes.length; i++)
+                    {
+                        if(recipes[i].totalTimeInSeconds != null)
+                        {
+                        outputHTML += "<img src=" + recipes[i].smallImageUrls + "-c height=60 width=60>  <a href='http://www.yummly.com/recipe/external/" + recipes[i].id + "' target='_blank'>" + recipes[i].recipeName + " " + recipes[i].totalTimeInSeconds / 60 + "min " + Array(recipes[i].rating + 1).join('\u2605') + "</a>" + " Source: " + recipes[i].sourceDisplayName + "<br />";
+                        }
+                         
+                    }   
+                }
+                var results = document.getElementById('outputRecipes');
+                results.innerHTML = outputHTML;
+                 
+                if (results.scrollHeight > results.clientHeight) 
+                {
+                        results.setAttribute("style","height: 32.407407407% !important; margin-top: 30px; overflow-x: auto; overflow-y: auto;");
+                    
+                }
                 
             }
-            ul{
-                list-style-type: none;
-                font-size:20px;
-                padding: 10px;
+            
+            
+            
+            //may not use
+            function displayOne(content)
+            {
+                var outputHTML = "";
+                var calories;
+                var servingSize;
+                var time;
+                var rating;
+                //calorie count
+                
+                for(i = 0; i < content.nutritionEstimates.length; i++)
+                {
+                    if (content.nutritionEstimates[i].attribute == 'ENERC_KCAL')
+                    {
+                        calories = content.nutritionEstimates[i].value;
+                        break;
+                    }
+                }
+                
+                document.getElementById('outputRecipes').innerHTML = outputHTML;
             }
-
-            ul li{
-                display:block;
-                float:left;
-                position: relative;
-                width:160px;
+            
+            function loadAllRecipes(searchString){
+                sortBy = document.getElementById("sortBy");
+                sortBy = sortBy[sortBy.selectedIndex].id;
+                var id = "ac71fb76";
+                var key = "d52dd4bc4c6735675551f9779e2e8b4d";
+                var yummlyURL = "http://api.yummly.com/v1/api/recipes?callback=displayAll&_app_id=" + id + "&_app_key=" + key;
+                var splitIngr = searchString.split(" ");
+                for(i = 0; i < splitIngr.length; i++)
+                {
+                	if(splitIngr[i].substr(0,1) == "-"){
+                		yummlyURL += "&excludedIngredient[]=" + splitIngr[i].substring(1, splitIngr[i].length).toLowerCase();
+                  }
+                  else{
+                  	yummlyURL += "&allowedIngredient[]=" + splitIngr[i].toLowerCase();
+                  }
+                }
+                yummlyURL += "&maxResult=100&start=0";
+                
+                // create script element
+                var script = document.createElement('script');
+                // assing src with callback name
+                script.src = yummlyURL;
+                // insert script to document and load content
+                document.body.appendChild(script);
             }
-
-            ul li a{
-                display: block;
-                text-decoration: none;
-                padding:12px 12px 12px 12px; 
-                background: #99DEE4; 
-                color:white; 
-                margin-left:1px;
-                text-align: center;
-
+            
+            //may not use
+            function loadRecipeDetails(recipeId)
+            {
+                 var id = "ac71fb76";
+                var key = "d52dd4bc4c6735675551f9779e2e8b4d";
+                var yummlyURL = "http://api.yummly.com/v1/api/recipe/" + recipeId + "?callback=displayOne&_app_id=" + id + "&_app_key=" + key;
+                
+                // create script element
+                var script = document.createElement('script');
+                // assing src with callback name
+                script.src = yummlyURL;
+                // insert script to document and load content
+                document.body.appendChild(script);
             }
-
-             li ul.hidden li a{
-                padding: 8px 15px 8px 15px;
-                width:130px;
-                text-align: left;
+            
+              function displayResult(){
+                loadAllRecipes(document.getElementById('searchbar').value);
             }
-
-            li ul.hidden{
-                position: absolute;
-                font-size:0.74em;
-                padding:0;
-                margin:0;
-                display: none;
+            
+             function entered(event) {
+             if (event.keyCode == 13) {
+                displayResult();
+                return false;
+                }
             }
-
-           li.submenu:hover ul.hidden{
-                display: block;
-            }
-
-             ul li a:hover{
-                background: #BFF3FF; 
-            }
-        </style>
+        </script>
     </head>
     
     <body>
-        <div style="margin-left: 25%;" align="center">
-            <nav>
-                <ul class="menu">
-                    <li><a href="http://fridgewiz.tumblr.com/"><b>Home</b></a></li>
-                    <li class="submenu"><a href="http://aboutfridgewiz.tumblr.com/"><b>About Us</b></a></li>
-                    <li  class="submenu"><a href="#"><b>Random Tips</b></a>
-                         <ul class="hidden">
-                             <li><a href="http://shopfridgewiz.tumblr.com/"><b>Shopping Tips</b></a></li>
-                             <li><a href="http://cookfridgewiz.tumblr.com/"><b>Cooking Tips</b></a></li>
-                             <li><a href="http://storefridgewiz.tumblr.com/"    ><b>Storing Tips</b></a></li>
-                             <li><a href="http://growyourownfridgewiz.tumblr.com/"><b>Grow Your Own</b></a></li>
-                         </ul>
-                    </li>
-                    <li><a href="http://referencefridgewiz.tumblr.com/"><b>Reference</b></a></li>
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
-                </ul>
-            </nav>
-        </div>
-   
-    <!--JavaScript code does here -->
+     <div style="margin-left: 25%; float: right; margin-top: 300px" class="menu">
+     <a href="http://fridgewiz.tumblr.com/"><b>Home</b></a>
+     <a href="http://aboutfridgewiz.tumblr.com/"><b>About Us</b></a>
+        <a href="http://shopfridgewiz.tumblr.com/"><b>Shopping Tips</b></a>
+        <a href="http://cookfridgewiz.tumblr.com/"><b>Cooking Tips</b></a>
+        <a href="http://storefridgewiz.tumblr.com/"><b>Storing Tips</b></a>
+        <a href="http://growyourownfridgewiz.tumblr.com/"><b>Grow Your Own</b></a>
+       <a href="http://referencefridgewiz.tumblr.com/"><b>Reference</b></a>
+            </div>
     
     <div id="searchbox">
-        <form id="searchbox_XXXXXXXXXX:YYYYYYYYY" action="">
-        
-            <input value="XXXXXXXXXX:YYYYYYYYY" name="cx" type="hidden"/>
-            <input value="FORID:11" name="cof" type="hidden"/>
-            <input id="q" style="" name="q" size="75" type="text"/>
-            <button class="btn">Search</button>
-            <div class = "help"><p2>Welcome to FridgeWiz, the site that teaches you about cooking by providing you with recipes 
-            and tips that will be useful in the kitchen. Above, you can find out about who we are, find random tips about 
-            cooking and grocceries. On the left of this question mark is a search bar that can you be use to find recipes. 
-            In order to use the search bar properly, type in the name of the recipe. If you do not have a specific recipe, you
-            can search by ingredient by putting the ingredient name (i.e, eggs)
-            Thank you for visiting our website and we hope you will enjoy it!</p2></div>
-        </form>
-    </div>    
-    
-    <div>
-      <script>
-        (function() {
-        var cx = '001653076749647547486:f35zy_psvga';
-        var gcse = document.createElement('script');
-        gcse.type = 'text/javascript';
-        gcse.async = true;
-        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//cse.google.com/cse.js?cx=' + cx;
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(gcse, s);
-      })();
-        </script>
-        
-        <div> 
-        <gcse:searchresults-only></gcse:searchresults-only>
-        </div>
+        <input id="searchbar" style="width: 200px" onkeypress="return entered(event)"></input>
+        <input type="button" value="Search" onclick="displayResult()" ></input>
+        <select id="sortBy">
+            <option id="relevance" selected>Relevance</option>
+            <option id="totalTimeInSeconds">Time to Make</option>
+            <option id="rating">Rating</option>
+        </select><nobr></nobr>
+         <div class = "help"><p2>Welcome to FridgeWiz, the site that teaches you about cooking by providing you with recipes and tips that will be useful in the kitchen. To the right, you can find out about who we are and get random tips about cooking and groceries. The search bar to the left can help you find recipes by ingredient. In order to search, type in the names of the ingredients you want to use, separated by space (i.e, eggs butter banana). You can also exclude ingredients by placing a minus symbol (-) before the ingredient name (i.e. -peanuts) and click on the dropdown menu to choose the sorting options.
+    Thank you for visiting our website and we hope you will enjoy it!</p2></div>
+       
+    </div>
+    <br>
 
-<!--New boxes go here -->
-<script language="javascript">function add(type){;var element=document.createElement("input");element.setAttribute("type",type);element.setAttribute("value",type);element.setAttribute("name",type);var foo=document.getElementById("fooBar");foo.appendChild(element);}</script>
- 
+     <div id="outputRecipes" class="outputrecipes">
+        
+    </div>
+        
     </body>
 </html>
