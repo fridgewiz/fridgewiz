@@ -220,7 +220,7 @@
                     {
                         if(recipes[i].totalTimeInSeconds != null)
                         {
-                        outputHTML += "<a href='http://www.yummly.com/recipe/external/" + recipes[i].id + "' target='_blank'>" + recipes[i].recipeName + " " + recipes[i].totalTimeInSeconds / 60 + "min " + Array(recipes[i].rating + 1).join('\u2605') + "</a>" + " Source: " + recipes[i].sourceDisplayName + "<br />";
+                        outputHTML += "<img src=" + recipes[i].smallImageUrls + "-c height=60 width=60>  <a href='http://www.yummly.com/recipe/external/" + recipes[i].id + "' target='_blank'>" + recipes[i].recipeName + " " + recipes[i].totalTimeInSeconds / 60 + "min " + Array(recipes[i].rating + 1).join('\u2605') + "</a>" + " Source: " + recipes[i].sourceDisplayName + "<br />";
                         }
                          
                     }   
@@ -333,7 +333,7 @@
             <option id="totalTimeInSeconds">Time to Make</option>
             <option id="rating">Rating</option>
         </select><nobr></nobr>
-         <div class = "help"><p2>Welcome to FridgeWiz, the site that teaches you about cooking by providing you with recipes and tips that will be useful in the kitchen. To the right, you can find out about who we are, find random tips about cooking and grocceries. On the left of this question mark is a search bar that can you use to find recipes. In order to use the search bar properly, type in the names of the ingredients you want to use, separated by space (i.e, eggs butter banana).
+         <div class = "help"><p2>Welcome to FridgeWiz, the site that teaches you about cooking by providing you with recipes and tips that will be useful in the kitchen. To the right, you can find out about who we are, find random tips about cooking and grocceries. On the left of this question mark is a search bar that can you use to find recipes. In order to use the search bar properly, type in the names of the ingredients you want to use, separated by space (i.e, eggs butter banana). You can also click on the dropdown menu to choose the sorting options.
     Thank you for visiting our website and we hope you will enjoy it!</p2></div>
        
     </div>
