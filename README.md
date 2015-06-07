@@ -1,4 +1,4 @@
-# Beta Release
+# Final Release
 
 FridgeWiz is a website that helps you search for recipes from famous cooking sites based on your preferences. 
 We also offer random tips to save food in daily life. Enjoy cooking and saving your food!
@@ -15,3 +15,4 @@ Note: If you click on any button on the navigation bar in the homepage,
 or click on the "Homepage" button or "Arrow" button on any of the sub-page,
 you will be directed to our actual website since our site is already uploaded
 on Tumblr.com
+Note: please contact the Yummly's API customer service to request for id and key.
